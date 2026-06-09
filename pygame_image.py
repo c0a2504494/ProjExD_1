@@ -35,17 +35,19 @@ def main():
             screen.blit(bg_img, [i+1600, 0])
 
         key_list=pg.key.get_pressed()
+        x=0
+        y=0
         if key_list[pg.K_UP]:
-            kk_rct.move_ip((0, -1))
+            y=-1
         if key_list[pg.K_DOWN]:
-            kk_rct.move_ip((0, 1))
+            y=1
         if key_list[pg.K_LEFT]:
-            kk_rct.move_ip((-1, 0))
+            x=-1
         if key_list[pg.K_RIGHT]:
-            kk_rct.move_ip((1, 0))  
+            x=1
         else:
-            kk_rct.move_ip((-1, 0))  
-            
+            x=-1 
+        kk_rct.move_ip(x,y)
         screen.blit(gazoukadai, [kk_rct.x, kk_rct.y])
         i-=1
         
