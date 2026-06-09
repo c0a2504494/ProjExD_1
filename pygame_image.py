@@ -42,14 +42,18 @@ def main():
         if key_list[pg.K_LEFT]:
             kk_rct.move_ip((-1, 0))
         if key_list[pg.K_RIGHT]:
-            kk_rct.move_ip((1, 0))
+            kk_rct.move_ip((1, 0))  
+        else:
+            kk_rct.move_ip((-1, 0))  
+            
         screen.blit(gazoukadai, [kk_rct.x, kk_rct.y])
-        
-
-
-
-        
         i-=1
+        
+
+
+
+        
+        
         if i==-1600:
             i=0
             k+=1
